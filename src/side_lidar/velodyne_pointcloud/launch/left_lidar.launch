@@ -1,0 +1,23 @@
+<launch>
+
+<!--<arg name="launch_driver" default="true" />-->
+
+<group ns="lidar">
+
+<group ns="left">
+<include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">
+<arg name="frame_id" default="base_link" />
+<arg name="device_ip" value="192.168.3.201"/>
+<arg name="port" value="2369"/>
+<!--<arg name="scan_phase" default="180.0" />-->
+<!--<arg name="sensor_timestamp" default="false" />-->
+<!--<arg name="launch_driver" value="$(arg launch_driver)" />-->
+</include>
+</group>
+
+<!-- nodelet manager -->
+<arg name="manager" default="lidar_nodelet_manager" />
+<node pkg="nodelet" type="nodelet" name="$(arg manager)" args="manager" />
+
+</group>
+</launch>

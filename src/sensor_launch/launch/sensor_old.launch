@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!-- camera -->
+  <include file="$(find pointgrey_camera_driver)/launch/camera.launch" />
+
+  <!-- lidar -->
+  <include file="$(find hesai_lidar)/launch/hesai_lidar.launch" />
+
+  <!-- gps -->
+  <include file="$(find novatel_oem7_driver)/launch/oem7_tty.launch" />
+</launch>

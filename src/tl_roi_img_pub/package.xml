@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>tl_roi_img_pub</name>
+  <version>0.0.0</version>
+  <description>The tl_roi_img_pub package</description>
+  <maintainer email="dgist@todo.todo">dgist</maintainer>
+  <license>TODO</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>autoware_perception_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_export_depend>autoware_perception_msgs</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <exec_depend>autoware_perception_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <arg name="enable_camera" default="true"/>
+  <arg name="enable_lidar" default="true"/>
+  <arg name="enable_gps" default="true"/>
+  
+  <group if="$(arg enable_camera)">
+    <!-- camera -->
+    <include file="$(find pointgrey_camera_driver)/launch/camera.launch" />
+  </group>
+
+  <group if="$(arg enable_lidar)">
+    <!-- lidar top -->
+    <include file="$(find hesai_lidar)/launch/hesai_lidar.launch" />
+    <!-- ibeo  
+    <include file="$(find ibeo_lux)/launch/ibeo_lux.launch" /> -->
+  </group>
+
+  <group if="$(arg enable_gps)">
+    <!-- gps -->
+    <include file="$(find novatel_oem7_driver)/launch/oem7_tty.launch" />
+  </group>
+</launch>
